@@ -1,0 +1,122 @@
+<div class="electives">
+  <div class="programelective">
+    <p>Select your program electives</p>
+    <div class="electiveblock">
+      <span>Program elective 3 - </span>
+      <select name="slotA" (change) = "pe3changed($event)" >
+        <option value="" disabled selected> - </option>
+        <option value="Advanced OS">Advanced OS</option>
+        <option value="Advanced Computer Networks">Advanced Computer Networks</option>
+      </select>
+    </div>
+    <br />
+    <div class="electiveblock">
+      <span>Program elective 4 - </span>
+      <select name="slotD" (change) = "pe4changed($event)" >
+        <option value="" disabled selected> - </option>
+        <option value="Parallel Architecture and Programming">Parallel Architecture and Programming</option>
+        <option value="Transaction processing system and concurrency control">
+          Transaction processing system and concurrency control
+        </option>
+      </select>
+    </div>
+    <br />
+  </div>
+
+  <div class="otherelectives">
+      <div class="streamelective">
+        <p>Select your stream elective</p>
+        <div class="electiveblock">
+            <span>Stream Elective 2 - </span>
+            <select name="slotC" (change) = "se2changed($event)" >
+              <option value="" disabled selected> - </option>
+                <option value="Cloud Computing">Cloud Computing</option>
+                <option value="Artificial Intelligence">Artificial Intelligence</option>
+                <option value="Advanced Database Management System">Advanced Database Management System</option>
+                <option value="Principle of cryptography">Principle of cryptography</option>
+                <option value="Digital Speech Processing">Digital Speech Processing</option>
+                <option value="Embedded Systems">Embedded Systems</option>
+            </select>
+        </div>
+      </div>
+  </div>
+
+  <div class="managementelective">
+      <p>Select your management elective</p>
+      <div class="electiveblock">
+          <span>Management Elective - </span>
+          <select name="" (change) = "mechanged($event)">
+            <option value="" disabled selected> - </option>
+              <option value="OB">Organization Behavior</option>
+              <option value="ECDM  E-commerce and Digital Marketing">E-commerce and Digital Marketing</option>
+          </select>
+      </div>
+  </div>
+</div>
+<br>
+<table #timeTable>
+  <thead>
+    <tr>
+      <th></th>
+      <th>9:00 - 10:00</th>
+      <th>10:00 - 11:00</th>
+      <th>11:00 - 12:00</th>
+      <th>12:00 - 1:00</th>
+      <th>1:00 - 2:00</th>
+      <th>2:00 - 3:00</th>
+      <th>3:00 - 4:00</th>
+      <th>4:00 - 5:00</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="day">Monday</td>
+      <td>{{ slotA }}</td>
+      <td>{{ slotB }}</td>
+      <td>{{ slotC }}</td>
+      <td>{{ slotD }}</td>
+      <td>B</td>
+      <td>{{ slotE }}</td>
+      <td>{{ slotF }}</td>
+      <td>{{ slotH }}</td>
+    </tr>
+    <tr>
+      <td class="day">Tuesday</td>
+      <td>{{ slotB }}</td>
+      <td>{{ slotC }}</td>
+      <td>{{ slotD }}</td>
+      <td>{{ slotE }}</td>
+      <td>R</td>
+      <td>{{ slotA}}</td>
+      <td> - </td>
+      <td>{{ slotH }}</td>
+    </tr>
+    <tr>
+      <td>Wednesday</td>
+      <td>{{ slotC }}</td>
+      <td>{{ slotD }}</td>
+      <td>{{ slotE }}</td>
+      <td>{{ slotA }}</td>
+      <td>E</td>
+      <td>{{ slotB }}</td>
+      <td> - </td>
+      <td>{{ slotH }}</td>
+    </tr>
+    <tr>
+      <td class="day">Thursday</td>
+      <td>{{ slotD }}</td>
+      <td>{{ slotE }}</td>
+      <td>{{ slotA }}</td>
+      <td>{{ slotB }}</td>
+      <td>A</td>
+      <td>{{ slotC }}</td>
+      <td> - </td>
+      <td>{{ slotH }}</td>
+    </tr>
+    <tr>
+      <td class="day">Friday</td>
+      <td colspan="8">Demo Miscellaneous class</td>
+    </tr>
+  </tbody>
+</table>
+<br />
